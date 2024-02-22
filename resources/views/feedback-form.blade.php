@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
     <h2>Feedback Form</h2>
@@ -11,7 +11,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ url('/feedback') }}" method="post">
+    <form action="{{ url('/feedback/send') }}" method="post">
         @csrf
         <div class="form-group">
             <label for="full_name">Full Name <spa style="color: red">(Required)</spa></label>

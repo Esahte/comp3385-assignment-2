@@ -24,6 +24,11 @@ class FeedbackController extends Controller
         Mail::to('comp3385@uwi.edu', 'COMP3385 Course Admin')
             ->send(new Feedback($full_name, $email, $comment));
 
-        redirect('success');
+        return redirect('success');
     }
+
+//    public function success()
+//    {
+//        return view('success');
+//    }
 }
